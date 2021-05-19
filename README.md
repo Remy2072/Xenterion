@@ -1,20 +1,63 @@
-<p align="center"><img src="https://twemoji.maxcdn.com/2/svg/1f4dd.svg" height="64" alt="Project Logo"></p>
-<h3 align="center">Xenterion</h3>
-<p align="center"><a href="https://github.com/Remy2072">
-Remy Duivesteijn</a> | <a href="https://github.com/Jaywesterlow">Jaymar Westerlow</a> | <a href="https://github.com/KaanSecen">Kaan Secen</a></p>
-<p align="center">
-    <a href="#"><img src="https://img.shields.io/github/last-commit/Remy2072/Xenterion" alt="Last commit"></a>
-    <a href="https://github.com/Remy2072/Xenterion/releases/latest"><img src="https://img.shields.io/github/v/release/Remy2072/Xenterion" alt="Latest Release"></a>
-    <a href="https://github.com/Remy2072/Xenterion/issues"><img src="https://img.shields.io/badge/contributions-welcome-ff69b4.svg" alt="Contributions Welcome"></a>
-</p>
+## Hoe maak je een Branch en push je het.
 
-### Onze site
+```
+1.git init
+```
 
-[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://remyduivesteijn.nl/projects/xenterion/index.html)
-[![Trello](https://img.shields.io/badge/-trello-2e343f?logo=Trello&logoColor=white&style=for-the-badge)](https://trello.com/b/10PdD5Wt/team-ez-10-v2)
+```
+2. git pull https://github.com/Remy2072/Xenterion.git
+```
 
----
+```
+3. git branch naam (hierdoor maak je een branch.)
+```
 
-##### Last edited on: 27/3/2021
+```
+4. git branch (om te kijken in welke branch je zit er of die is gemaakt.)
+```
 
-![Profile views](https://visitor-badge.glitch.me/badge?page_id=xenterion.xenterion)
+```
+5. git checkout naam (om in de branch te komen die je net hebt gemaakt.)
+```
+
+```
+6. maak een verandering of voeg iets toe aan de branch.
+```
+
+```
+7. git add.
+```
+
+```
+8. git status (als alles klopt ga je door naar de volgende stap.)
+```
+
+```
+9. git commit -m "text"
+```
+
+```
+10. git remote add naam https://github.com/Remy2072/Xenterion.git
+```
+
+```
+11. git push --set-upstream naam naam
+```
+
+## Hoe je een branch kan mergen.
+
+```
+1. git checkout master (hierdoor ga je naar de master.)
+```
+
+```
+2. git merge naam (hierdoor voeg je beide branches samen.)
+```
+
+```
+3. git remote add master https://github.com/Remy2072/Xenterion.git
+```
+
+```
+4. git push --set-upstream master master
+```
