@@ -1,5 +1,7 @@
 /* *FONT * ----------------------------------------------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap");
+
 
 /* *BODY * ----------------------------------------------------------------------*/
 body {
@@ -231,7 +233,7 @@ h3 {
     "Price25"
     "Instore1";
   grid-area: Giftcard-1;
-  border: 4px solid #262649;
+  box-shadow: rgba(0, 0, 0, 0.342) 2px 2px;
   border-radius: 15px;
   background-color: #fff;
   margin: 25px;
@@ -264,6 +266,23 @@ h3 {
 border: 2px solid black;
 background-color: #fff;
 border-radius: 5px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-left: 7px;
+padding-right: 7px;
+padding: 10px;
+width: 120px;
+}
+
+.findStore:hover {
+  color: white;
+  background-color: #1c98d5;
+  border: none;
+}
+
+#location-pin:hover {
+  fill: white;
 }
 
 #location-pin{                           /*! Jaymar*/
@@ -280,10 +299,11 @@ border-radius: 5px;
     "Price50"
     "Instore2";
   grid-area: Giftcard-2;
-  border: 4px solid #262649;
   border-radius: 15px;
   background-color: #fff;
   margin: 25px;
+  position: relative;
+  z-index: 4;
 }
 
 .Eur50 {
@@ -308,7 +328,6 @@ border-radius: 5px;
     "Price100"
     "Instore3";
   grid-area: Giftcard-3;
-  border: 4px solid #262649;
   border-radius: 15px;
   background-color: #fff;
   margin: 25px;
@@ -329,5 +348,29 @@ border-radius: 5px;
 .Svg-2 {
   grid-area: Svg-2;
   padding-left: 25px;
-  padding-top: 100px;
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Info-2 {
+  position: relative;
+}
+
+.giftcards {
+  position: absolute;
+  top: -150px;
+  left: 25px;
+}
+
+.giftcard {display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.knop1:hover {
+  fill:white;
+  color: white;
 }
