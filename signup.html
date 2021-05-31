@@ -4,97 +4,153 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xenterion | Exchange</title>
+    <title>Xenterion | Sign Up</title>
     <link rel="icon" href="assets/images/favicon.ico" />
-    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="stylesheet" href="assets/styles/loginsignup.css" />
   </head>
   <body>
-    <div class="Header">
-      <div class="Logo-Header">
-        <img class="logo" src="/assets/images/LogoXenterion.svg" alt="logo" />
-      </div>
-      <div class="Buttons-Header">
-        <a href="https://www.google.com/" class="signup">Sign up</a>
-        <a href="https://www.google.com/" class="signin">Sign in</a>
-      </div>
-    </div>
-
-    <div class="Info-Box1">
-      <div class="Info-1">
-        <h1>
-          Buy cryptocurrency <br />
-          effortlessly
-        </h1>
-      </div>
-      <div class="Text-1">
-        <h3>
-          Get your giftcard and get the best experience<br />
-          when buying cryptocurrency.
-        </h3>
-        <a href="https://www.google.com/" class="getstarted">Get started</a>
-      </div>
-      <div class="Svg-1">
-        <img src="/assets/images/40789.svg" alt="1e svg" />
-      </div>
-    </div>
-
     <svg
+      version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      viewbox="0 0 1440 320"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      width="1440px"
+      height="640px"
+      viewbox="0 0 1440 640"
+      style="overflow: visible; enable-background: new 0 0 1440 640"
+      xml:space="preserve"
       class="waves"
     >
-      <path
-        fill="#EAFDFC"
-        fill-opacity="1"
-        d="M0,160L60,160C120,160,240,160,360,165.3C480,171,600,181,720,170.7C840,160,960,128,1080,117.3C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-      ></path>
-
-      <path
-        fill="#D8FFFD"
-        fill-opacity="1"
-        d="M0,288L60,277.3C120,267,240,245,360,224C480,203,600,181,720,192C840,203,960,245,1080,256C1200,267,1320,245,1380,234.7L1440,224L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-      ></path>
+      <style type="text/css">
+        .st0 {
+          fill: none;
+        }
+        .st1 {
+          fill: #ebf7f8;
+        }
+        .st2 {
+          fill: #ddf1f4;
+        }
+      </style>
+      <defs></defs>
+      <g>
+        <path
+          class="st0"
+          d="M428.49,60.91c266.63-2.18,350.66,21.97,580.61,31.36C1173.92,99,1352.22,76.54,1440,63.27V0H0v92.36
+  C82.2,81.03,244.01,62.42,428.49,60.91z"
+        />
+        <path
+          class="st1"
+          d="M1009.1,92.27c-229.95-9.39-313.97-33.54-580.61-31.36C244.01,62.42,82.2,81.03,0,92.36v21.42
+  c72.08,6.06,207.97,15.08,384.44,15.84c267.59,1.16,381.02-16.22,652.56-13.73c182.31,1.67,327.36,15.51,403,24.42V63.27
+  C1352.22,76.54,1173.92,99,1009.1,92.27z"
+        />
+        <path
+          class="st2"
+          d="M384.44,129.61C207.97,128.85,72.08,119.83,0,113.77V320h1440V140.3c-75.64-8.91-220.69-22.74-403-24.42
+  C765.46,113.39,652.03,130.77,384.44,129.61z"
+        />
+      </g>
+      <rect y="320" class="st2" width="1440" height="1080" />
     </svg>
 
+    <!-- *VORMGEVING VAN DE LOGIN PAGINA -->
+    <div class="login-form">
+      <div style="margin-bottom: 25px" class="logo">
+        <img src="assets/images/LogoXenterion.svg" alt="" />
+      </div>
 
+      <!-- *ALLE TEXT IN DE LOGIN PAGINA -->
+      <h6>Sign Up</h6>
 
-    <div class="Info-Box2">
-      <div class="Info-2">
-        <h1>
-          Giftcards
-        </h1>
-      </div>
-      <div class="Giftcards-box">
-        <div class="Giftcard-1">
-          <div class="Eur25">
-            <img src="/assets/images/Giftcard-100-Xenterion.jpg" alt="2e svg" class="gift25"/>
-          </div>
-          <div class="Price25">
-            <h2>€25</h2>
-          </div>
-          <div class="Instore1">
-            <button>Hello</button>
-          </div>
+      <form action="signup.php" method="POST">
+        <div style="margin-bottom: 15px" class="textbox">
+          <input type="text" id="name" placeholder="Username" name="name" />
+          <span
+            class="check-message hidden"
+            style="font-family: 'Jost', sans-serif"
+            >Required</span
+          >
         </div>
-        <div class="Giftcard-2">
-          <div class="Eur50"></div>
-          <div class="Price50"></div>
-          <div class="Instore2"></div>
+
+        <div style="margin-bottom: 15px" class="textbox">
+          <input
+            type="email"
+            id="email"
+            placeholder="Email Address"
+            name="ename"
+          />
+          <span
+            class="check-message hidden"
+            style="font-family: 'Jost', sans-serif"
+            >Required</span
+          >
         </div>
-        <div class="Giftcard-3">
-          <div class="Eur100"></div>
-          <div class="Price100"></div>
-          <div class="Instore3"></div>
+
+        <div class="textbox" style="margin-bottom: 15px">
+          <input
+            type="password"
+            id="pname"
+            placeholder="Password (minimum 8 characters)"
+          />
+          <span
+            class="check-message hidden"
+            style="font-family: 'Jost', sans-serif"
+            >Required</span
+          >
         </div>
-      </div>
-      <div class="Svg-2">
-        <img src="/assets/images/8500.svg" alt="2e svg"/>
-      </div>
+
+        <div class="textbox">
+          <input
+            type="password"
+            id="rpname"
+            placeholder="Repeat Password"
+            name="pname"
+          />
+          <span
+            class="check-message hidden"
+            style="font-family: 'Jost', sans-serif"
+            >Required</span
+          >
+        </div>
+
+        <div class="options">
+          <label class="remember-me">
+            <span class="checkbox">
+              <input type="checkbox" />
+              <span class="checked"></span>
+            </span>
+            Remember me
+          </label>
+
+          <a href="login.html">Already Have an Account?</a>
+        </div>
+
+        <input
+          style="color: #262649"
+          type="submit"
+          value="Create account"
+          class="login-btn"
+          id="login-style"
+          disabled
+        />
+
+        <div class="privacy-link">
+          <span class="error"></span>
+        </div>
+
+        <div class="privacy-link">
+          <a href="" target="_blank">Privacy Policy</a>
+        </div>
+      </form>
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/scripts/signup.js"></script>
+    
   </body>
 </html>
 
-
-
-<!-- a<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L60,277.3C120,267,240,245,360,224C480,203,600,181,720,192C840,203,960,245,1080,256C1200,267,1320,245,1380,234.7L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg> -->
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,288L60,277.3C120,267,240,245,360,224C480,203,600,181,720,192C840,203,960,245,1080,256C1200,267,1320,245,1380,234.7L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg> -->
