@@ -233,11 +233,10 @@ h3 {
     "Price25"
     "Instore1";
   grid-area: Giftcard-1;
-  box-shadow: rgba(0, 0, 0, 0.342) 2px 2px;
+  /* box-shadow: rgba(0, 0, 0, 0.342) 2px 2px; */
   border-radius: 15px;
   background-color: #fff;
   margin: 25px;
-  padding: 10px;                      /*! Jaymar*/
 }
 
 .Eur25 {
@@ -248,6 +247,9 @@ h3 {
 .gift25 {
   width: 150px;
   border: 3px solid #262649;
+  background-color: #262649;
+  padding-bottom: 0.1px;
+  padding-left: 0.1px;
   border-radius: 15px;                /*! Jaymar*/
 }
 .Price25 {
@@ -278,15 +280,8 @@ width: 120px;
 .findStore:hover {
   color: white;
   background-color: #1c98d5;
-  border: none;
-}
-
-#location-pin:hover {
-  fill: white;
-}
-
-#location-pin{                           /*! Jaymar*/
-
+  border: 2px solid #1c98d5;
+  transition: 0.2s;
 }
 
 .Giftcard-2 {
@@ -370,7 +365,39 @@ width: 120px;
   flex-direction: column;
 }
 
-.knop1:hover {
+.reverseWaves{
+  transform: rotate(180deg);
+}
+/* .knop1:hover {
   fill:white;
   color: white;
+  border: 2px solid #1c98d5;
+} */
+
+
+/*! HIER IS JE KAOLO GRID*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 50px 200px 200px 70px;
+  gap: 0px 0px;
+  grid-template-areas:
+    "howToUse howToUse howToUse howToUse"
+    ". . . ."
+    "step1 step2 Svg-3 Svg-3"
+    "step3 step4 Svg-3 Svg-3"
+    ". . . .";
 }
+
+.step1 { grid-area: step1; }
+
+.step2 { grid-area: step2; }
+
+.step3 { grid-area: step3; }
+
+.step4 { grid-area: step4; }
+
+.Svg-3 { grid-area: Svg-3; }
+
+.howToUse { grid-area: howToUse; }
