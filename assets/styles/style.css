@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap");
 
-
 /* *BODY * ----------------------------------------------------------------------*/
 body {
   padding: 25px;
@@ -93,7 +92,7 @@ h3 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 200px 200px;
   margin-top: 25px;
-  gap: 40px 0px;                                              /*! Jaymar*/
+  gap: 40px 0px;
   grid-template-areas:
     "Info-1 Info-1 Svg-1 Svg-1"
     "Text-1 Text-1 Svg-1 Svg-1";
@@ -111,7 +110,7 @@ h3 {
   grid-area: Svg-1;
 }
 
-.getYourGiftcard{
+.getYourGiftcard {
   margin-bottom: 35px;
 }
 
@@ -258,13 +257,13 @@ h3 {
   background-color: #262649;
   padding-bottom: 0.1px;
   padding-left: 0.1px;
-  border-radius: 15px;                /*! Jaymar*/
+  border-radius: 15px;
 }
 .Price25 {
   grid-area: Price25;
 }
 
-.priceTagText {                       /*! Jaymar*/
+.priceTagText {
   font-size: 60px;
 }
 
@@ -272,17 +271,17 @@ h3 {
   grid-area: Instore1;
 }
 
-.findStore{                           /*! Jaymar*/
-border: 2px solid black;
-background-color: #fff;
-border-radius: 5px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-left: 7px;
-padding-right: 7px;
-padding: 10px;
-width: 120px;
+.findStore {
+  border: 2px solid black;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding: 10px;
+  width: 120px;
 }
 
 .findStore:hover {
@@ -365,15 +364,18 @@ width: 120px;
   margin-left: 25px;
 }
 
-.giftcard {display: flex;
+.giftcard {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.reverseWaves{
+.reverseWaves {
   transform: rotate(180deg);
 }
+
+/*! -------------------------------------------- How to grid */
 
 .howTo-Grid {
   display: grid;
@@ -382,43 +384,41 @@ width: 120px;
   gap: 0px 0px;
   grid-template-areas:
     "howToUse howToUse howToUse howToUse"
-    ". . . ."
+    ". . Svg-3 Svg-3"
     "step1 step2 Svg-3 Svg-3"
     "step3 step4 Svg-3 Svg-3"
     ". . . .";
 }
 
-h3.steps{
+h3.steps {
   margin: 0;
 }
 
-.step1-img{
+.step1-img {
   height: 75px;
   margin-bottom: 2px;
 }
 
-p.step1-txt{
+p.step1-txt {
   line-height: 2.5;
 }
 
-.step2-img{
+.step2-img {
   height: 68px;
   margin-bottom: 9px;
 }
 
-
-.step3-img{
+.step3-img {
   height: 70px;
   margin-bottom: 7px;
 }
 
-
-.step4-img{
+.step4-img {
   height: 77px;
   margin-bottom: 0px;
 }
 
-.steps-txt{
+.steps-txt {
   padding: 0;
   margin: 0;
   font-family: "NanumGothic", sans-serif;
@@ -426,39 +426,88 @@ p.step1-txt{
   text-align: center;
 }
 
-.step1 { 
+.step1 {
   grid-area: step1;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
- }
+}
 
-.step2 { 
+.step2 {
   grid-area: step2;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
- }
+}
 
-.step3 { 
+.step3 {
   grid-area: step3;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
- }
+}
 
-.step4 { 
+.step4 {
   grid-area: step4;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
- }
+}
 
-.Svg-3 { grid-area: Svg-3;
- }
+.Svg-3 {
+  grid-area: Svg-3;
+}
 
-.howToUse { grid-area: howToUse; }
+.howToUse {
+  grid-area: howToUse;
+}
+
+/*! ---------------------------------------------FAQ grid */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 200px 50px 120px 120px 120px 70px 50px;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "FAQ-header FAQ-header . ."
+    ". . . ."
+    "FAQ-SVG FAQ-SVG FAQ-1 FAQ-1"
+    "FAQ-SVG FAQ-SVG FAQ-2 FAQ-2"
+    "FAQ-SVG FAQ-SVG FAQ-3 FAQ-3"
+    ". . . FAQ-other"
+    ". . . .";
+  background-color: #d8fffd;
+  margin: -4px -25px 0px -25px;
+}
+
+.FAQ-SVG {
+  grid-area: FAQ-SVG;
+}
+
+.FAQ-header {
+  grid-area: FAQ-header;
+  line-height: 1.3;
+  margin-left: 25px;
+}
+
+.FAQ-1 {
+  grid-area: FAQ-1;
+}
+
+.FAQ-2 {
+  grid-area: FAQ-2;
+}
+
+.FAQ-3 {
+  grid-area: FAQ-3;
+}
+
+.FAQ-other {
+  grid-area: FAQ-other;
+}
