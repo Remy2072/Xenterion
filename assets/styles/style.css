@@ -490,6 +490,13 @@ p.step1-txt {
   grid-area: FAQ-SVG;
 }
 
+.faqq {
+  width: 800px;
+  margin-left: 60px;
+ 
+}
+
+
 .FAQ-header {
   grid-area: FAQ-header;
   line-height: 1.3;
