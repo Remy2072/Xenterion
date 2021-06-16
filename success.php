@@ -1,12 +1,29 @@
+<?php
+include "config.php";
+
+
+if (!isset($_SESSION['value'])) {
+  header('Location: succes.php');
+}
+
+// Go back to home
+if (isset($_POST['success-btn'])) {
+  header('Location: home.php');
+}
+
+$balance = $_SESSION['value'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xenterion | Code Invalid</title>
+    <title>Xenterion | Balance Added</title>
     <link rel="icon" href="assets/images/favicon.ico" />
-    <link rel="stylesheet" href="assets/styles/error.css" />
+    <link rel="stylesheet" href="assets/styles/success.css" />
   </head>
   <body>
     <svg
@@ -62,38 +79,35 @@
 
       <!-- *ALLE TEXT IN DE LOGIN PAGINA -->
 
+
+
       <div class="card">
         <div class="card2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="151.6"
-            height="151.6"
-            viewbox="0 0 151.6 151.6"
-            style="width: 150px; height: 150px; margin: 50px"
-          >
-            <path
-              id="iconmonstr-x-mark-9"
-              d="M152.6,133.085,96.2,76.669l56.4-56.326L133.085,1,76.7,57.361,20.363,1,1,20.363,57.409,76.841,1,133.237,20.363,152.6,76.89,96.15l56.368,56.45Z"
-              transform="translate(-1 -1)"
-              fill="#702929"
-            />
-          </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="157.516" height="124.7" viewbox="0 0 157.516 124.7" style="width: 175px; height: 175px;margin: 35px">
+                <path id="iconmonstr-check-mark-1" d="M133.134,2,59.068,77.916,24.376,45.028,0,69.417,59.068,126.7,157.516,26.382Z" transform="translate(0 -2)" fill="#293170"/>
+              </svg>
         </div>
       </div>
 
-      <h3 style="margin-top: 75px; font-size: 30px">This code is not valid</h3>
+      <h2 id="balance"></h2>
+      <h3>Has been successfully added to your account</h3>
 
-      <form method="" action="login.html">
-        <input
-          style="color: #262649"
-          type="submit"
-          value="CLOSE"
-          class="login-btn"
-          id="login-style"
-        />
-      </form>
+      <form method="POST" action="">
+      <input
+        style="color: #262649"
+        type="submit"
+        value="Complete"
+        name="success-btn"
+        class="login-btn"
+        id="login-style"
+      />
+    </form>
+
     </div>
-
+    <script type="text/javascript">
+    var phpbal ='<?php echo $balance;?>';
+    </script>
+    <script type="text/javascript" src="assets/scripts/success.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../assets/scripts/signup.js"></script> -->

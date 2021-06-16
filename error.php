@@ -1,12 +1,27 @@
+<?php
+include "config.php";
+
+
+if (!isset($_SESSION['code'])) {
+  header('Location: error.php');
+}
+
+// logout
+if (isset($_POST['error-btn'])) {
+  header('Location: home.php');
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Xenterion | Account Created</title>
+    <title>Xenterion | Code Invalid</title>
     <link rel="icon" href="assets/images/favicon.ico" />
-    <link rel="stylesheet" href="assets/styles/pages.css" />
+    <link rel="stylesheet" href="assets/styles/error.css" />
   </head>
   <body>
     <svg
@@ -57,36 +72,43 @@
     <!-- *VORMGEVING VAN DE LOGIN PAGINA -->
     <div class="login-form">
       <div style="margin-bottom: 25px" class="logo">
-        <img src="assets/images/SuccesXenterionLogo.svg" alt="" />
+        <img src="assets/images/LogoXenterion.svg" alt="" />
       </div>
 
       <!-- *ALLE TEXT IN DE LOGIN PAGINA -->
 
-
-
-      <!-- <div class="card">
+      <div class="card">
         <div class="card2">
-          <img
-            src="#"
-            alt="Complete"
-            style="width: 100%; height: 100%; border-radius: 200px"
-          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="151.6"
+            height="151.6"
+            viewbox="0 0 151.6 151.6"
+            style="width: 150px; height: 150px; margin: 50px"
+          >
+            <path
+              id="iconmonstr-x-mark-9"
+              d="M152.6,133.085,96.2,76.669l56.4-56.326L133.085,1,76.7,57.361,20.363,1,1,20.363,57.409,76.841,1,133.237,20.363,152.6,76.89,96.15l56.368,56.45Z"
+              transform="translate(-1 -1)"
+              fill="#702929"
+            />
+          </svg>
         </div>
-      </div> -->
+      </div>
+      
+      <h3 style="margin-top: 75px; font-size: 24px"><?php echo $_SESSION['code']; ?></h3>
+      <h3 style="margin-top: 15px; font-size: 30px"><?php echo $_SESSION['error_code']; ?></h3>
 
-      <h2>Account Created</h2>
-      <h3>Your registration was succesful</h3>
-
-      <form method="" action="login.html">
-      <input
-        style="color: #262649"
-        type="submit"
-        value="LOG IN NOW"
-        class="login-btn"
-        id="login-style"
-      />
-    </form>
-
+      <form method="POST" action="">
+        <input
+          style="color: #262649"
+          type="submit"
+          value="CLOSE"
+          name="error-btn"
+          class="login-btn"
+          id="login-style"
+        />
+      </form>
     </div>
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

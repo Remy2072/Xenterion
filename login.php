@@ -61,10 +61,6 @@ C765.46,113.39,652.03,130.77,384.44,129.61z"
       <h6>Sign in</h6>
 
       <form action="" method="POST">
-        <div style="margin-bottom: 15px" class="textbox">
-          <input type="text" id="name" placeholder="Username" name="name" />
-          <span class="check-message hidden" style="font-family: 'Jost', sans-serif">Required</span>
-        </div>
 
         <div style="margin-bottom: 15px" class="textbox">
           <input
@@ -108,36 +104,11 @@ C765.46,113.39,652.03,130.77,384.44,129.61z"
           disabled
         />
         <div class="privacy-link">
-          <span style="color: crimson">
-            <!-- <?php
-          include "config.php";
-
-
-          if(isset($_POST['loginbtn'])){
-
-              $name = mysqli_real_escape_string($con,$_POST['name']);
-              $uname = mysqli_real_escape_string($con,$_POST['ename']);
-              $password = mysqli_real_escape_string($con,$_POST['pname']);
-
-
-              if ($uname != "" && $password != "" && $name != ""){
-
-                  $sql_query = "select count(*) as cntUser from users where email='".$uname."' and password='".$password."' and name='".$name."'";
-                  $result = mysqli_query($con,$sql_query);
-                  $row = mysqli_fetch_array($result);
-
-                  $count = $row['cntUser'];
-
-                  if($count > 0){
-                      $_SESSION['ename'] = $uname;
-                      $_SESSION['name'] = $name;
-                      header('Location: ../index.php');
-                  }else{
-                      echo "Invalid username and password";
-                  }
-              }
-          }
-          ?> -->
+          <span class="error">
+            <?php
+              include "config.php";
+              include "logindb.php";
+            ?>
             <br /><br
           /></span>
           <a href="signup.html">Create Account<br /><br /></a>
@@ -164,7 +135,7 @@ C765.46,113.39,652.03,130.77,384.44,129.61z"
 
       $(".textbox input").keyup(function () {
         var inputs = $(".textbox input");
-        if (inputs[1].value.length > 7 && inputs[2].value.length > 7) {
+        if (inputs[0].value.length > 7 && inputs[1].value.length > 7) {
           $(".login-btn").attr("disabled", false);
           $(".login-btn").addClass("active");
         } else {
