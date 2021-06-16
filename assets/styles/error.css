@@ -123,7 +123,6 @@ body {
 }
 
 /* *CHECKBOX * --------------------------------------------------------*/
-/* circle * --------------------------------------------------------------------*/
 .card {
   background: #fff;
   margin-left: 70px;
@@ -196,12 +195,6 @@ body {
   transition: 0.3s linear;
   border-radius: 4px;
 }
-
-/* .login-btn.active {
-  border: 3px solid #1c98d5;
-  background: #1c98d5;
-  color: #fff !important;
-} */
 
 .login-btn.active:hover {
   opacity: 0.7;
