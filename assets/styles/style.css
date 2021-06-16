@@ -4,7 +4,7 @@
 
 /* *BODY * ----------------------------------------------------------------------*/
 body {
-  padding: 25px;
+  padding: 25px 25px 0px;
   margin: 0px;
 }
 .header {
@@ -471,12 +471,11 @@ p.step1-txt {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 200px 50px 120px 120px 120px 70px 50px;
+  grid-template-rows: 200px 120px 120px 120px 70px 50px;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "FAQ-header FAQ-header . ."
-    ". . . ."
     "FAQ-SVG FAQ-SVG FAQ-1 FAQ-1"
     "FAQ-SVG FAQ-SVG FAQ-2 FAQ-2"
     "FAQ-SVG FAQ-SVG FAQ-3 FAQ-3"
@@ -490,6 +489,10 @@ p.step1-txt {
   grid-area: FAQ-SVG;
 }
 
+.FAQ-SVG-img{
+  width: 100%;
+}
+
 .FAQ-header {
   grid-area: FAQ-header;
   line-height: 1.3;
@@ -498,16 +501,37 @@ p.step1-txt {
 
 .FAQ-1 {
   grid-area: FAQ-1;
+  background-color: yellow;
 }
 
 .FAQ-2 {
   grid-area: FAQ-2;
+  background-color: purple;
 }
 
 .FAQ-3 {
   grid-area: FAQ-3;
+  background-color: green;
+}
+
+.questions{
+  display: flex;
+  flex-direction: row;
+}
+
+.questionLogo{
+  width: 60px;
+  margin-top: 0px;
 }
 
 .FAQ-other {
   grid-area: FAQ-other;
+}
+
+.FAQ-subtitle{
+  color: #262649;
+  font-size: 35px;
+  font-family: "jost", sans-serif;
+  margin: 10px 0 0 20px;
+  padding: 0;
 }
