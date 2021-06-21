@@ -135,67 +135,6 @@ h3 {
   margin-right: -25px;
 }
 
-/* .Info-Box2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px 400px 200px;
-  gap: 0px 0px;
-  grid-template-areas:
-    "Info-2 Info-2 . ."
-    "Svg-2 Svg-2 Giftcards-box Giftcards-box"
-    "Svg-2 Svg-2 Giftcards-box Giftcards-box";
-  margin-left: -25px;
-  margin-right: -25px;
-  margin-top: -25px;
-  background-color: #d8fffd;
-}
-
-.Info-2 {
-  grid-area: Info-2;
-  padding-left: 25px; 
-}
-
-.Giftcards-box {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px 300px;
-  gap: 0px 0px;
-  grid-template-areas:
-    "Giftcard-1 Giftcard-2 Giftcard-3"
-    "Giftcard-1 Giftcard-2 Giftcard-3";
-  grid-area: Giftcards-box;
-  margin: 25px;
-}
-
-.Giftcard-1 {
-  grid-area: Giftcard-1;
-  border: 6px solid #262649;
-  border-radius: 15px;
-  background-color: #fff;
-  margin: 25px;
-}
-
-.Giftcard-2 {
-  grid-area: Giftcard-2;
-  border: 6px solid #262649;
-  border-radius: 15px;
-  background-color: #fff;
-  margin: 25px;
-}
-
-.Giftcard-3 {
-  grid-area: Giftcard-3;
-  border: 6px solid #262649;
-  border-radius: 15px;
-  background-color: #fff;
-  margin: 25px;
-}
-
-.Svg-2 {
-  grid-area: Svg-2;
-  padding-left: 25px; 
-  padding-top: 100px;
-} */
 
 /*** HIER **/
 
@@ -476,9 +415,9 @@ p.step1-txt {
   grid-auto-flow: row;
   grid-template-areas:
     "FAQ-header FAQ-header . ."
-    "FAQ-SVG FAQ-SVG FAQ-1 FAQ-1"
-    "FAQ-SVG FAQ-SVG FAQ-2 FAQ-2"
-    "FAQ-SVG FAQ-SVG FAQ-3 FAQ-3"
+    "FAQ-SVG FAQ-SVG FAQ FAQ"
+    "FAQ-SVG FAQ-SVG FAQ FAQ"
+    "FAQ-SVG FAQ-SVG FAQ FAQ"
     ". . . FAQ-other"
     ". . . .";
   background-color: #d8fffd;
@@ -491,6 +430,7 @@ p.step1-txt {
 
 .FAQ-SVG-img{
   width: 100%;
+  margin-top: -100px;
 }
 
 .FAQ-header {
@@ -499,39 +439,79 @@ p.step1-txt {
   margin-left: 25px;
 }
 
-.FAQ-1 {
-  grid-area: FAQ-1;
-  background-color: yellow;
-}
-
-.FAQ-2 {
-  grid-area: FAQ-2;
-  background-color: purple;
-}
-
-.FAQ-3 {
-  grid-area: FAQ-3;
-  background-color: green;
-}
-
-.questions{
-  display: flex;
-  flex-direction: row;
-}
-
-.questionLogo{
-  width: 60px;
-  margin-top: 0px;
+.FAQ {
+  grid-area: FAQ;
 }
 
 .FAQ-other {
   grid-area: FAQ-other;
+  padding-top: 50px;
+  padding-left: 132px;
 }
 
-.FAQ-subtitle{
-  color: #262649;
-  font-size: 35px;
-  font-family: "jost", sans-serif;
-  margin: 10px 0 0 20px;
-  padding: 0;
+
+/*! ---------------------------------------------FAQ questions */
+
+.FAQ,
+.FAQ:before,
+.FAQ:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-2{
+    width: 45%;
+    min-width: 500px;
+    position: absolute;
+
+}
+.wrapper{
+    background-color: #ffffff;
+    margin-bottom: 20px;
+    padding: 15px 40px;
+    border-radius: 5px;
+    box-shadow: 0 15px 25px rgba(0,0,50,0.2);
+}
+.toggle,
+.content{
+    font-family: "Poppins",sans-serif;
+}
+.toggle{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #262649;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px 0;
+}
+.content{
+    position: relative;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 30px;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+}
+
+.otherQuestions {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: #1c98d5;
+  border-radius: 15px;
+  border: 3px solid #1c98d5;
+  padding: 8px 30px;
+}
+
+.otherQuestions:hover {
+  background-color: #1c98d5;
+  color: #fff;
 }
