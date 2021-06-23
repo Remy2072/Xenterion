@@ -40,6 +40,7 @@ if (isset($_POST['but_logout'])) {
   $userid = $_SESSION['userid'];
   $balance = $_SESSION['balance'];
   include "balance.php";
+  include "buy.php";
   ?>
   <span>Euro: <span id="balance"></span></span>
 
@@ -56,17 +57,18 @@ if (isset($_POST['but_logout'])) {
     <label for="cryptocurrency">Select currency</label>
     <br><br>
     <select name="cryptocurrency" id="cryptocurrency" size="3" required>
-      <option value="XRP">XRP</option>
-      <option value="VET">VET</option>
-      <option value="THETA">THETA</option>
+      <option value="XRP" onclick="XRP()">XRP</option>
+      <option value="VET" onclick="VET()">VET</option>
+      <option value="THETA" onclick="THETA()">THETA</option>
     </select>
     <br><br>
-
-    <input type="text" id="round_no" placeholder="Enter an amount" name="amount-money" maxlength="5" oninput="this.value = this.value.replace(/[^0-5.]/g, '').replace(/(\..*?)\..*/g, '$1');" onkeyup="round_off(this.value)" required />
-    <p>Total Amount in crypto: </p>
+    <input type="text" id="round_no" placeholder="Enter an amount" name="amount-money" value="" maxlength="5" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '€1');" onkeyup="round_off(this.value)" onchange="tradingcost()" required />
     <input type="text" placeholder="Enter Wallet Adress" name="wallet-adress" required />
-    <p>Trading cost: </p>
-    <p>Transfer fee: </p>
+    <p >Trading cost: €<span id="crypto_trading"></span></p>
+    <p >Transfer fee: €<span id="crypto_transfer"></span></p>
+    <p>Coin: <span id="crypto_type"></span></p>
+    <p>Price: €<span id="crypto_price"></span></p>
+    <p>Total amount after fee: €<input type="text" id="crypto_total" name="totalamount" value="" readonly></p>
     <input style="color: #262649" type="submit" value="BUY" name="buy-btn" required />
   </form>
 
