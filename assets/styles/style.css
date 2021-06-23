@@ -314,7 +314,8 @@ h3 {
   transform: rotate(180deg);
 }
 
-/*! -------------------------------------------- How to grid */
+/* *"HOW TO USE" GRID * ------------------------------------------------------------------------------------*/
+
 
 .howTo-Grid {
   display: grid;
@@ -405,12 +406,12 @@ p.step1-txt {
   grid-area: howToUse;
 }
 
-/*! ---------------------------------------------FAQ grid */
+/* *FAQ GRID * ------------------------------------------------------------------------------------*/
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 200px 120px 120px 120px 70px 50px;
+  grid-template-rows: 200px 120px 120px 120px 70px 50px 35px;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -419,7 +420,8 @@ p.step1-txt {
     "FAQ-SVG FAQ-SVG FAQ FAQ"
     "FAQ-SVG FAQ-SVG FAQ FAQ"
     ". . . FAQ-other"
-    ". . . .";
+    ". . . ."
+    "footer footer footer footer";
   background-color: #d8fffd;
   margin: -4px -25px 0px -25px;
 }
@@ -427,6 +429,7 @@ p.step1-txt {
 .FAQ-SVG {
   grid-area: FAQ-SVG;
 }
+
 
 .FAQ-SVG-img{
   width: 100%;
@@ -449,8 +452,15 @@ p.step1-txt {
   padding-left: 132px;
 }
 
+.footer{
+  grid-area: footer;
+  background-color: #F2F2F2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-/*! ---------------------------------------------FAQ questions */
+/* *FAQ QUESTIONS * ------------------------------------------------------------------------------------*/
 
 .FAQ,
 .FAQ:before,
@@ -508,10 +518,87 @@ p.step1-txt {
   color: #1c98d5;
   border-radius: 15px;
   border: 3px solid #1c98d5;
-  padding: 8px 30px;
+  padding: 12px 30px;
 }
 
 .otherQuestions:hover {
   background-color: #1c98d5;
   color: #fff;
+}
+
+/* *FOOTER* ------------------------------------------------------------------------------------*/
+
+#copyright{
+  margin-top: 6px;
+  margin-left: 40px;
+  padding: 0;
+  font-size: 18px;
+  color: #262649;
+  font-family: "NanumGothic", sans-serif;
+}
+
+#copyright2021{
+  color: #1C98D5;
+}
+
+#github{
+  margin-top: 6px;
+  margin-right: 40px;
+  width: 25px;
+  height: 25px;
+}
+
+
+
+/* *SCROLL BAR * ------------------------------------------------------------------------------------*/
+::-moz-selection {
+  background: #79DFDB;
+}
+
+::selection {
+  background: #79DFDB;
+}
+
+::-webkit-scrollbar {
+  background-color: none;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: insert 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #BAF0EE;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  background-color: #79DFDB;
+}
+
+/* *MEDIA QUERIES * ------------------------------------------------------------------------------------*/
+
+/*? IPHONE XR  ------------------------------------------------------------------------------------*/
+
+@media only screen 
+    and (min-device-width: 414px) 
+    and (min-device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) 
+    and (orientation: portrait) { 
+
+
+}
+
+/*?  IPAD  ------------------------------------------------------------------------------------*/
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    
+
 }
