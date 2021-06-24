@@ -11,7 +11,7 @@ if (isset($_POST['balance-btn'])) {
             $_SESSION['value'] = $row['value'];
             $giftcard_balance = $row['value'];
             if ($row['valid'] === '1') {
-                $query2 = "UPDATE giftcard SET valid = '0' WHERE valid = '1'";
+                $query2 = "UPDATE giftcard SET valid = '0' WHERE code = '$giftcard_code'";
                 mysqli_query($con, $query2);
                 usercheck($userid, $giftcard_balance);
                 return $giftcard_balance;
