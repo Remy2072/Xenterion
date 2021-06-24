@@ -1,5 +1,6 @@
 <?php
 
+/*Test*/
 session_start();
 
 $host = "localhost"; /* Host name */
