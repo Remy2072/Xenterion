@@ -1,0 +1,187 @@
+/* *FONT * ----------------------------------------------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap");
+
+/* *BODY * ----------------------------------------------------------------------*/
+body {
+  opacity: 0.7;
+}
+.login-btn {
+  width: 200px;
+  height: 50px;
+  background: #fff;
+  border: 3px solid #262649;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  transition: 0.3s linear;
+  border-radius: 4px;
+  margin-left: 50px;
+}
+
+.login-btn.active {
+  border: 3px solid #1c98d5;
+  background: #1c98d5;
+  color: #fff !important;
+}
+
+.login-btn.active:hover {
+  opacity: 0.7;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-form h6 {
+  color: #1c98d5;
+  font-size: 14px;
+  font-family: "Jost", sans-serif;
+}
+
+.textbox {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.textbox input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  background: #fff;
+  font-size: 18px;
+  outline: none;
+  color: #1c98d5;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.textbox input:focus {
+  background: #f1f0f0 !important;
+}
+
+.check-message {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.textbox input:focus + .check-message {
+  display: none;
+}
+
+.remember-me {
+  float: left;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px 250px 200px 175px;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Welkom Welkom Welkom Welkom Welkom"
+    "Select-currency Grafiek Grafiek Grafiek Grafiek"
+    "Select-currency Buy-widget Buy-widget Buy-widget Add-credit"
+    "Order-history Order-history Order-history Order-history Order-history";
+  width: 100%;
+  height: 100%;
+}
+
+.welkomnaam {
+  color: #53539f;
+  font-size: 28px;
+  font-family: "Jost", sans-serif;
+  padding-right: 45%;
+}
+
+.logout {
+  color: #53539f;
+  float: right;
+  font-size: 28px;
+  font-family: "Jost", sans-serif;
+  margin: 30px;
+}
+
+.Select-currency {
+  color: #53539f;
+  font-size: 28px;
+  font-family: "Jost", sans-serif;
+  text-align: center;
+}
+
+.Add-credits {
+  color: #53539f;
+  font-size: 18px;
+  font-family: "Jost", sans-serif;
+  text-align: center;
+}
+
+p {
+  color: #53539f;
+  font-size: 12px;
+  font-family: "Jost", sans-serif;  
+  text-align: center;
+}
+
+
+.Grafiek {
+  color: #53539f;
+  font-size: 22px;
+  font-family: "Jost", sans-serif;
+  padding-left: 10px;
+}
+
+.Buy-widget {
+  color: #53539f;
+  font-size: 28px;
+  font-family: "Jost", sans-serif;
+  text-align: center;
+}
+
+.Welkom {
+  grid-area: Welkom;
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: stretch;
+  background-color: #f8f8f8;
+}
+
+.Select-currency {
+  grid-area: Select-currency;
+  background-color: #F8F8F8;
+}
+
+.Grafiek {
+  grid-area: Grafiek;
+  background-color: #F8F8F8;
+}
+
+.Buy-widget {
+  grid-area: Buy-widget;
+  background-color: #F8F8F8;
+}
+
+.Order-history {
+  grid-area: Order-history;
+  background-color: #F8F8F8;
+}
+
+.Add-credit {
+  grid-area: Add-credit;
+  background-color: #F8F8F8;
+}
