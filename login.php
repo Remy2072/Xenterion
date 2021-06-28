@@ -54,7 +54,7 @@ C765.46,113.39,652.03,130.77,384.44,129.61z"
     </svg>
     <div class="login-form">
       <div style="margin-bottom: 25px" class="logo">
-        <img src="assets/images/LogoXenterion.svg" alt="" />
+        <img src="assets/images/LogoXenterion.png" alt="" />
       </div>
 
       <!-- *ALLE TEXT IN DE LOGIN PAGINA -->

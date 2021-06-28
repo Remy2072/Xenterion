@@ -74,7 +74,7 @@ $balance = $_SESSION['value'];
     <!-- *VORMGEVING VAN DE LOGIN PAGINA -->
     <div class="login-form">
       <div style="margin-bottom: 25px" class="logo">
-        <img src="assets/images/LogoXenterion.svg" alt="" />
+        <img src="assets/images/LogoXenterion.png" alt="" />
       </div>
 
       <!-- *ALLE TEXT IN DE LOGIN PAGINA -->
